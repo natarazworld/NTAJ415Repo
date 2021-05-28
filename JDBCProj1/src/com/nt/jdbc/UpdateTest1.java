@@ -1,4 +1,4 @@
-//DeleteTest.java
+//UpdateTest1.java
 package com.nt.jdbc;
 
 import java.sql.Connection;
@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class UpdateTest {
+public class UpdateTest1 {
 
 	public static void main(String[] args) {
 		Scanner sc=null;
@@ -16,22 +16,23 @@ public class UpdateTest {
 		try {
 			//read inputs
 			sc=new Scanner(System.in);
-			String newCity=null,newName=null;
-			float newAvg=0.0f;
-			int no=0;
+			 float  hike_percentage=0.0f;
+			 String desg1=null,desg2=null,desg3=null;
 			if(sc!=null) {
-				System.out.println("Enter new name for student ::");
-				newName=sc.nextLine(); //gives anil rao
-				System.out.println("Enter new address for student ::");
-				newCity=sc.nextLine(); //gives navi mumbai
-				System.out.println("Enter new avg for student ::");
-				newAvg=sc.nextFloat(); //gives 89.66
-				System.out.println("Enter sno of student ::");
-				no=sc.nextInt(); //gives 1003
+				System.out.println("employee desg1 ::");
+				desg1=sc.next().toUpperCase();  //gives CLERK
+				System.out.println("employee desg2 ::");
+				desg2=sc.next().toUpperCase();   //gives MANAGER
+				System.out.println("employee desg3 ::");
+				desg3=sc.next().toUpperCase();   //gives ANALYST
+				System.out.println(" salary hike percentage  ::");
+			   hike_percentage=sc.nextFloat();
+
 			}
-			///conver input values as required for the SQL query
-			newName="'"+newName+"'"; //gives 'ani rao'
-			newCity="'"+newCity+"'";  //gives 'navi mumbai'
+			///convert input values as required for the SQL query
+			desg1="'"+desg1+"'";  //gives 'CLERK'
+			desg2="'"+desg2+"'";  //gives  'MANGER'
+			desg3="'"+desg3+"'";  //gives  'ANALYST'
 			
 			//register  JDBC driver by loading  JDBC driver class
 	        //  Class.forName("oracle.jdbc.drvier.OracleDriver");
@@ -41,10 +42,11 @@ public class UpdateTest {
 			//create Statement object
 			if(con!=null)
 				st=con.createStatement();
+			
 			//prepare SQL query
-			    //update  student set sname='anil rao' ,sadd='navi mumbai' ,avg=91.55 where sno=1003;
-			  String query="update  student set sname="+newName+" ,sadd="+newCity+" ,avg="+newAvg+" where sno="+no;
-			  System.out.println(query);
+			   //update emp set sal=sal+(sal*10/100) where  job in ('CLERK','MANAGER','ANALYST')
+			      String query="UPDATE EMP SET SAL=SAL+(SAL*"+hike_percentage/100+") WHERE  JOB IN ("+desg1+","+desg2+","+desg3+")";
+			      System.out.println(query);
 					  
 			//send and execute SQL query in Db s/w
 			int count=0;
