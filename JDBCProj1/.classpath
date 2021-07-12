@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
+	<classpathentry exported="true" kind="lib" path="C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Nareshit/Downloads/mysql-connector-java-8.0.25.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Nareshit/Downloads/commons-io-2.10.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Nareshit/Downloads/postgresql-42.2.22.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nareshit/Downloads/mysql-connector-java-8.0.25.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nareshit/Downloads/commons-io-2.10.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Nareshit/Downloads/postgresql-42.2.22.jar"/>
+	<classpathentry kind="lib" path="C:/oraclexe/app/oracle/product/11.2.0/server/bin"/>
+	<classpathentry kind="lib" path="C:/IDSServer1/classes"/>
+	<classpathentry kind="lib" path="G:/Softwares/Type5 JDBC driver/oracle.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
