@@ -7,7 +7,22 @@ package com.nt.servlet;
 
  public class XmlServlet extends  HttpServlet
  {
+	 
+	 static {
+			System.out.println("XmlServlet:: static block");
+		}
+		
+		public XmlServlet() {
+			System.out.println("XmlServlet:: 0-param constructor");
+		}
+		
+		@Override
+		public void init(ServletConfig config) throws ServletException {
+		  System.out.println("XmlServlet:: init(ServletConfig cg)");
+		}
+	 
 	 protected  void service(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException{
+		  System.out.println("XmlServlet.service()");
 		 //set response content type
 		  res.setContentType("text/xml");
 		  //get PrintWriter Stream

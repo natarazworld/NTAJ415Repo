@@ -7,8 +7,23 @@ package com.nt.servlet;
 
  public class HtmlServlet extends  HttpServlet
  {
+	 static {
+			System.out.println("HtmlTestServlet:: static block");
+		}
+		
+		public HtmlServlet() {
+			System.out.println("HtmlServlet:: 0-param constructor");
+		}
+		
+		@Override
+		public void init(ServletConfig config) throws ServletException {
+		  System.out.println("HtmlServlet:: init(ServletConfig cg)");
+		}
+		
+	 
 	 protected  void service(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException{
-		 //set response content type
+		 System.out.println("HtmlServlet.service()");
+		 // set response content type
 		  res.setContentType("text/html");
 		  //get PrintWriter Stream
 		  PrintWriter pw=res.getWriter();

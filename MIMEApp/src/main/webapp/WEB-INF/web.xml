@@ -6,19 +6,19 @@
 	<servlet>
        <servlet-name>html </servlet-name>
         <servlet-class>com.nt.servlet.HtmlServlet</servlet-class>
+        <load-on-startup>10</load-on-startup>
 	</servlet>
 	 <!--Servlet Mapping Configuration -->
 	 <servlet-mapping>
             <servlet-name>html </servlet-name>
 			<url-pattern>/htmlurl </url-pattern>
-			<url-pattern>/htc </url-pattern>
-			<url-pattern>/abc.c </url-pattern>
 	 </servlet-mapping>
 
 	      <!--Servlet configuration -->
 	<servlet>
        <servlet-name>excel </servlet-name>
         <servlet-class>com.nt.servlet.ExcelServlet</servlet-class>
+         <load-on-startup>10</load-on-startup>
 	</servlet>
 	 <!--Servlet Mapping Configuration -->
 	 <servlet-mapping>
@@ -30,6 +30,7 @@
 	<servlet>
        <servlet-name>word </servlet-name>
         <servlet-class>com.nt.servlet.WordServlet</servlet-class>
+         <load-on-startup>10</load-on-startup>
 	</servlet>
 	 <!--Servlet Mapping Configuration -->
 	 <servlet-mapping>
@@ -41,6 +42,7 @@
 	<servlet>
        <servlet-name>plain </servlet-name>
         <servlet-class>com.nt.servlet.PlainServlet</servlet-class>
+         <load-on-startup></load-on-startup>
 	</servlet>
 	 <!--Servlet Mapping Configuration -->
 	 <servlet-mapping>
@@ -52,11 +54,25 @@
 	<servlet>
        <servlet-name>xml </servlet-name>
         <servlet-class>com.nt.servlet.XmlServlet</servlet-class>
+          <load-on-startup>10</load-on-startup>
 	</servlet>
 	 <!--Servlet Mapping Configuration -->
 	 <servlet-mapping>
             <servlet-name>xml</servlet-name>
 			<url-pattern>/xmlurl </url-pattern>
+	 </servlet-mapping>
+	 
+	 
+	 	      <!--Servlet configuration -->
+	<servlet>
+       <servlet-name>lc </servlet-name>
+        <servlet-class>com.nt.servlet.LcTestServlet</servlet-class>
+        <load-on-startup>10</load-on-startup>
+	</servlet>
+	 <!--Servlet Mapping Configuration -->
+	 <servlet-mapping>
+            <servlet-name>lc </servlet-name>
+			<url-pattern>/lcurl </url-pattern>
 	 </servlet-mapping>
   
   

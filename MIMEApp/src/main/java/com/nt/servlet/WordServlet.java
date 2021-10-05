@@ -7,7 +7,21 @@ package com.nt.servlet;
 
  public class WordServlet extends  HttpServlet
  {
+	 static {
+			System.out.println("WordTestServlet:: static block");
+		}
+		
+		public WordServlet() {
+			System.out.println("WordTestServlet:: 0-param constructor");
+		}
+		
+		@Override
+		public void init(ServletConfig config) throws ServletException {
+		  System.out.println("WordServlet:: init(ServletConfig cg)");
+		}
+	 
 	 protected  void service(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException{
+		 System.out.println("WordServlet.service()");
 		 //set response content type
 		  res.setContentType("application/msword");
 		  //get PrintWriter Stream
