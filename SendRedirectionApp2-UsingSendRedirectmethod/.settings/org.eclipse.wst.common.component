@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
+    <wb-module deploy-name="SendRedirectionApp1-UsingLinks">
+                
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                
+        <property name="java-output-path" value="/SendRedirectionApp1-UsingLinks/build/classes"/>
+        <property name="context-root" value="SendRedirectionApp2-UsingSendRedirectmethod"/>
+            
+    </wb-module>
+    
+</project-modules>
